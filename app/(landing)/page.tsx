@@ -1,10 +1,11 @@
+import Features from "./_components/features";
 import Hero from "./_components/hero";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="h-screen"></div>
+      <Features />
     </div>
   );
 }
