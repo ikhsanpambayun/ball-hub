@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-between h-screen md:py-30 py-24 2xl:px-48 xl:px-40 lg:px-30 sm:px-10 px-5 overflow-hidden">
+    <div className="flex flex-col items-center justify-between h-screen md:pt-32 md:pb-20 py-24 2xl:px-48 xl:px-40 lg:px-30 sm:px-10 px-5 overflow-hidden">
       <div className="absolute z-10 w-[50%] -left-32 top-0 aspect-square bg-gradient-radial from-primary/10 from-0% via-transparent via-70% to-transparent to-90% rounded-full"></div>
       <div className="relative flex flex-wrap md:flex-nowrap md:gap-0 gap-12 items-center justify-center w-full">
         <div className="space-y-4 md:space-y-6 lg:space-y-10 md:max-w-[64%]">
