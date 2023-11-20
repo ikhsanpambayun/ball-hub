@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ModeToggle } from "./mode-toggle";
 import Link from "next/link";
-import { AlignLeft, ExternalLink, Menu } from "lucide-react";
+import { AlignLeft, ExternalLink, Home, Menu, Radio } from "lucide-react";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -16,10 +16,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { BL1, BSA, CL, DED, FL1, PD, PL, PPL, SA } from "./logos";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [onTop, setOnTop] = useState(true);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     let scrollYProgress = window.scrollY;
@@ -28,17 +30,14 @@ const Navbar = () => {
         setOnTop(false);
         setScrolled(true);
         scrollYProgress = window.scrollY;
-        console.log("scroll bawah");
       } else if (window.scrollY > 120 && window.scrollY < scrollYProgress) {
         setOnTop(false);
         setScrolled(false);
         scrollYProgress = window.scrollY;
-        console.log("scroll atas");
       } else {
         setOnTop(true);
         setScrolled(false);
         scrollYProgress = window.scrollY;
-        console.log("diatas");
       }
     };
 
@@ -79,6 +78,12 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="flex items-center justify-end gap-5">
+          <Link href="/">
+            <Button variant="ghost" className="flex gap-2 items-center">
+              <p className="font-semibold">Home</p>
+              <Home className="w-4 h-4" />
+            </Button>
+          </Link>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="flex gap-2 items-center">
@@ -91,7 +96,7 @@ const Navbar = () => {
                 Explore Standings for Your Favorite Leagues
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <div className="grid grid-cols-3 content-center justify-items-center">
+              <div className="grid grid-cols-3 content-center justify-items-center mt-2">
                 <DropdownMenuItem className="w-[120px] h-[120px]">
                   <PL />
                 </DropdownMenuItem>
@@ -124,17 +129,18 @@ const Navbar = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="flex gap-2 items-center w-fit px-5 mt-2"
+                  className="flex gap-2 items-center w-fit px-4 mt-2"
                 >
-                  <p>See All</p>
+                  <p className="text-xs">See All</p>
                   <ExternalLink className="w-3 h-3" />
                 </Button>
               </Link>
             </DropdownMenuContent>
           </DropdownMenu>
           <Link href="/live-scores">
-            <Button variant="ghost">
+            <Button variant="ghost" className="flex gap-2 items-center">
               <p className="font-semibold">Live Scores</p>
+              <Radio className="w-4 h-4" />
             </Button>
           </Link>
           <ModeToggle />

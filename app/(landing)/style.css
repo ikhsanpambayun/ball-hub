@@ -77,3 +77,7 @@
     animation: marquee-2xl 10s linear infinite;
 }
 }
+
+.animate:hover {
+	animation-play-state: paused;
+}

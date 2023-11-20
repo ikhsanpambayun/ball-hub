@@ -10,7 +10,7 @@ const Closing = () => {
         </span>
       </h1>
       <div className="flex flex-wrap md:flex-nowrap justify-center sm:gap-10 gap-5">
-        <div className="border border-foreground bg-background/10 p-10 rounded-3xl backdrop-blur-md min-w-[350px] max-w-[500px] flex flex-col items-center gap-5">
+        <div className="border border-muted-foreground/30 bg-background/10 p-10 rounded-3xl backdrop-blur-md min-w-[350px] max-w-[500px] flex flex-col items-center gap-5">
           <BadgeCheck className="w-10 h-10" />
           <p className="text-lg tracking-normal leading-normal text-justify">
             Thank you for exploring the world of football with us. Whether
@@ -20,7 +20,7 @@ const Closing = () => {
             your passion for the beautiful game.
           </p>
         </div>
-        <div className="border border-foreground bg-background/10 p-10 rounded-3xl backdrop-blur-md min-w-[350px] max-w-[500px] flex flex-col items-center gap-5">
+        <div className="border border-muted-foreground/30 bg-background/10 p-10 rounded-3xl backdrop-blur-md min-w-[350px] max-w-[500px] flex flex-col items-center gap-5">
           <HeartHandshake className="w-10 h-10" />
           <p className="text-lg tracking-normal leading-normal text-justify">
             At BallHub, we're not just about the scores; we're about the
