@@ -15,8 +15,6 @@ const MouseBg = () => {
 
   const handleMouseMove = (event: MouseEvent) => {
     if (mouseRef.current) {
-      console.log(mouseRef.current.offsetHeight);
-
       mouseRef.current.style.setProperty(
         "top",
         `${

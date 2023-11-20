@@ -1,0 +1,147 @@
+import Image from "next/image";
+
+const Overview = () => {
+  return (
+    <div className="relative flex flex-col gap-10 items-center 2xl:px-48 xl:px-40 lg:px-30 sm:px-10 px-5 sm:pb-20 sm:pt-36 py-10">
+      <h1 className="text-center font-bold md:text-6xl sm:text-5xl text-4xl sm:tracking-normal sm:leading-tight text-transparent bg-clip-text bg-gradient-to-b from-blue-800 via-blue-900 to-gray-900 p-3">
+        Explore the Excitement <br /> Across Top Leagues
+      </h1>
+      <div className="relative h-[150px] w-full bg-gradient-to-r from-transparent via-background dark:via-foreground/50 to-transparent flex items-center overflow-hidden">
+        <div className="flex ga-0 items-center absolute left-0 top-0 animate">
+          <div className="flex w-1/2 justify-around items-center">
+            <Image
+              src="/assets/leagues/PL.png"
+              width={100}
+              height={100}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/BL1.png"
+              width={70}
+              height={70}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/CL.png"
+              width={80}
+              height={80}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/BSA.png"
+              width={80}
+              height={80}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/DED.png"
+              width={100}
+              height={100}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/FL1.png"
+              width={80}
+              height={80}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/PD.png"
+              width={90}
+              height={90}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/PPL.png"
+              width={80}
+              height={80}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/SA.png"
+              width={90}
+              height={90}
+              alt="logo"
+              className="mx-5"
+            />
+          </div>
+          <div className="flex w-1/2 justify-around items-center">
+            <Image
+              src="/assets/leagues/PL.png"
+              width={100}
+              height={100}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/BL1.png"
+              width={70}
+              height={70}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/CL.png"
+              width={80}
+              height={80}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/BSA.png"
+              width={80}
+              height={80}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/ED.png"
+              width={100}
+              height={100}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/FL1.png"
+              width={80}
+              height={80}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/PD.png"
+              width={90}
+              height={90}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/PPL.png"
+              width={80}
+              height={80}
+              alt="logo"
+              className="mx-5"
+            />
+            <Image
+              src="/assets/leagues/SA.png"
+              width={90}
+              height={90}
+              alt="logo"
+              className="mx-5"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Overview;

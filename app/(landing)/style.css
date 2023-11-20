@@ -1,0 +1,79 @@
+@keyframes marquee {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -350%;
+	}
+}
+
+.animate {
+	width: 700%;
+	animation: marquee 20s linear infinite;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+@keyframes marquee-sm {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -300%;
+	}
+}
+
+@media only screen and (min-width: 640px) {
+.animate {
+    width: 600%;
+    animation: marquee-sm 20s linear infinite;
+}
+}
+
+@keyframes marquee-md {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -250%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+.animate {
+    width: 500%;
+    animation: marquee-md 17s linear infinite;
+}
+}
+
+@keyframes marquee-lg {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -150%;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+.animate {
+    width: 300%;
+    animation: marquee-lg 15s linear infinite;
+}
+}
+
+@keyframes marquee-2xl {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -100%;
+	}
+}
+
+@media only screen and (min-width: 1536px) {
+.animate {
+    width: 200%;
+    animation: marquee-2xl 10s linear infinite;
+}
+}

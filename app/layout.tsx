@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import MouseBg from "@/components/mouse-bg";
 import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,13 +31,14 @@ export default function RootLayout({
           storageKey="bola-hub"
         >
           <main>
-            <div className="fixed top-0 left-0 bg-[url('/diagonal-stripes.svg')] h-screen w-screen opacity-5 flex flex-col justify-between">
+            <div className="-z-10 fixed top-0 left-0 bg-[url('/assets/diagonal-stripes.svg')] h-screen w-screen opacity-5 flex flex-col justify-between">
               <div className="bg-gradient-to-b from-background to-transparent h-[40%] w-screen" />
               <div className="bg-gradient-to-t from-background to-transparent h-[40%] w-screen" />
             </div>
             <MouseBg />
             <Navbar />
             {children}
+            <Footer />
           </main>
         </ThemeProvider>
       </body>

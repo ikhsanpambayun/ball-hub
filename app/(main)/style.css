@@ -1,0 +1,17 @@
+.league-card {
+    isolation: isolate;
+}
+
+.league-card::before,
+.league-card::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: inherit;
+    z-index: -1;
+    border-radius: 1rem;
+}
+
+.league-card::before {
+    filter: blur(0.3em);
+}

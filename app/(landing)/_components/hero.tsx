@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRightCircle } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -23,19 +24,21 @@ const Hero = () => {
         <div>
           <div className="absolute -z-10 w-[50%] -right-20 -top-20 aspect-square bg-gradient-radial from-primary/10 from-0% via-transparent via-70% to-transparent to-90% rounded-full"></div>
           <Image
-            src="/hero.png"
+            src="/assets/images/hero.png"
             height={550}
             width={500}
             alt="player"
-            className="md:w-[60vw] sm:w-[50vw] w-[60vw] sm:min-w-0 min-w-[270px]"
+            className="md:w-[60vw] sm:w-[50vw] w-[60vw] sm:min-w-0 min-w-[270px] max-h-[360px] md:max-h-none object-contain"
           />
         </div>
       </div>
       <Button variant="outline" size="lg" asChild>
-        <div className="relative flex items-center gap-4 shadow-2xl shadow-primary/10 hover:shadow-primary/40 cursor-pointer transition-all hover:transition-all duration-100 hover:duration-100">
-          <p>Check Now</p>
-          <ArrowRightCircle />
-        </div>
+        <Link href="/leagues">
+          <div className="relative flex items-center gap-4 shadow-2xl shadow-primary/10 hover:shadow-primary/40 cursor-pointer transition-all hover:transition-all duration-100 hover:duration-100">
+            <p className="font-bold">Check Now</p>
+            <ArrowRightCircle />
+          </div>
+        </Link>
       </Button>
     </div>
   );
