@@ -4,6 +4,7 @@ async function getData(id: string) {
   const res = await fetch(
     `https://api.football-data.org/v4/competitions/${id}/standings`,
     {
+      mode: "no-cors",
       method: "GET",
       headers: {
         "X-Auth-Token": "d6ada350127b4ca7863ed0d9f5c451a1",
