@@ -2,7 +2,7 @@
 
 async function getData(id: string) {
   const res = await fetch(
-    `http://api.football-data.org/v4/competitions/${id}/standings`,
+    `https://api.football-data.org/v4/competitions/${id}/standings`,
     {
       method: "GET",
       headers: {
