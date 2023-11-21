@@ -1,23 +1,6 @@
 "use client";
 
-async function getData(id: string) {
-  const res = await fetch(
-    `https://api.football-data.org/v4/competitions/${id}/standings`,
-    {
-      mode: "no-cors",
-      method: "GET",
-      headers: {
-        "X-Auth-Token": "d6ada350127b4ca7863ed0d9f5c451a1",
-      },
-    }
-  )
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-}
+import { useEffect, useState } from "react";
 
 interface pageProps {
   params: {
@@ -26,9 +9,26 @@ interface pageProps {
 }
 
 const LeaguePage = ({ params }: pageProps) => {
-  getData(params.id.toUpperCase());
+  const [leagueData, setLeagueData] = useState(null);
 
-  return <div>test</div>;
+  useEffect(() => {
+    const fetchLeagueData = async () => {
+      const res = await fetch(`/api/standings?id=${params.id}`);
+      const data = await res.json();
+
+      setLeagueData(data);
+    };
+
+    fetchLeagueData();
+  }, []);
+
+  if (leagueData === null) {
+    return <div>Loading</div>;
+  }
+
+  console.log(leagueData);
+
+  return <div>{params.id}</div>;
 };
 
 export default LeaguePage;

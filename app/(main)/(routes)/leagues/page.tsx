@@ -1,5 +1,4 @@
 import { BL1, BSA, CL, DED, FL1, PD, PL, PPL, SA } from "@/components/logos";
-import Image from "next/image";
 
 const page = () => {
   return (
