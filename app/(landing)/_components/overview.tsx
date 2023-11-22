@@ -103,7 +103,7 @@ const Overview = () => {
               className="mx-5"
             />
             <Image
-              src="/assets/leagues/ED.png"
+              src="/assets/leagues/DED.png"
               width={100}
               height={100}
               alt="logo"
