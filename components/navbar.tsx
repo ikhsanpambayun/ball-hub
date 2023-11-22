@@ -16,21 +16,19 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { BL1, BSA, CL, DED, FL1, PD, PL, PPL, SA } from "./logos";
-import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [onTop, setOnTop] = useState(true);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
     let scrollYProgress = window.scrollY;
     const handleScroll = () => {
-      if (window.scrollY > 120 && window.scrollY > scrollYProgress) {
+      if (window.scrollY > 10 && window.scrollY > scrollYProgress) {
         setOnTop(false);
         setScrolled(true);
         scrollYProgress = window.scrollY;
-      } else if (window.scrollY > 120 && window.scrollY < scrollYProgress) {
+      } else if (window.scrollY > 10 && window.scrollY < scrollYProgress) {
         setOnTop(false);
         setScrolled(false);
         scrollYProgress = window.scrollY;
@@ -125,16 +123,20 @@ const Navbar = () => {
                   <SA />
                 </DropdownMenuItem>
               </div>
-              <Link href="/leagues">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="flex gap-2 items-center w-fit px-4 mt-2"
-                >
-                  <p className="text-xs">See All</p>
-                  <ExternalLink className="w-3 h-3" />
-                </Button>
-              </Link>
+              <div className="w-fit">
+                <Link href="/leagues">
+                  <DropdownMenuItem asChild>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="flex gap-2 items-center w-fit px-4 mt-2 cursor-pointer"
+                    >
+                      <p className="text-xs">See All</p>
+                      <ExternalLink className="w-3 h-3" />
+                    </Button>
+                  </DropdownMenuItem>
+                </Link>
+              </div>
             </DropdownMenuContent>
           </DropdownMenu>
           <Link href="/live-scores">

@@ -31,7 +31,7 @@ export default function RootLayout({
           storageKey="bola-hub"
         >
           <main>
-            <div className="-z-10 fixed top-0 left-0 bg-[url('/assets/diagonal-stripes.svg')] h-screen w-screen opacity-5 flex flex-col justify-between">
+            <div className="-z-10 fixed top-0 left-0 bg-[url('/assets/bg/diagonal-stripes.svg')] h-screen w-screen opacity-5 flex flex-col justify-between">
               <div className="bg-gradient-to-b from-background to-transparent h-[40%] w-screen" />
               <div className="bg-gradient-to-t from-background to-transparent h-[40%] w-screen" />
             </div>

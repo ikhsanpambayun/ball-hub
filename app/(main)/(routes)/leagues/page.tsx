@@ -9,7 +9,7 @@ const page = () => {
           Favorite Leagues
         </span>
       </h1>
-      <div className="grid grid-cols-3 content-center justify-items-center gap-10 sm:gap-y-16 w-full h-full md:max-w-[70%]">
+      <div className="grid grid-cols-3 items-center justify-items-center gap-10 sm:gap-y-16 w-full h-full md:max-w-[70%]">
         <PL />
         <BL1 />
         <CL />
